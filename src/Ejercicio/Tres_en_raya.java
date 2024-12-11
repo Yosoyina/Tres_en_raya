@@ -206,8 +206,9 @@ public class Tres_en_raya {
             	
             	/*
             	 * Dentro de este bucle recorrera las tres filas si las x o las o de cada jugador 
-            	 * son iguales y si no son iguales con el guion asi si los tres son iguales 
-            	 * uno de los dos jugadores a ganado
+            	 * son iguales asi si los tres son iguales uno de los dos jugadores a ganado
+            	 *  y si no son iguales con el guion pasara a la siguiente fila o columnas hasta 
+            	 *  encontrar al  jugador ganador
             	 */
             	
             	
@@ -222,8 +223,29 @@ public class Tres_en_raya {
                 }
             }
 			
+            
+            // si la condicion es verdadera
+            if (Jg) {
+                // Apartado para mostrar el tablero del tres en raya 
+                for (int filas = 0; filas < Tabla.length; filas++) {
+                    for (int columnas = 0; columnas < Tabla[filas].length; columnas++) {
+                        System.out.print(Tabla[filas][columnas] + " ");
+                    }
+                    System.out.println("");
+                }
+                // Printea al jugador Ganador del tres en raya
+                
+                System.out.println(" ___________________________________________");
+				System.out.println("|                                           |");
+                System.out.println("|     "+TurnoJug + " ha ganado el juego!    |");
+                System.out.println("|___________________________________________|");
+                
+                break;
+            }
 			
-			
+            
+            
+            
 		} // acaba el bucle while
 		
 		
