@@ -106,18 +106,38 @@ public class Tres_en_raya {
 					
 				}
 				System.out.println("");
-			} // acaba el recorrido de la tabal del tres en raya
+			} // acaba el recorrido de la tabla del tres en raya
 			
 			System.out.println("");
 			
-			System.out.println(TurnoJug + "este jugador comienza ");
+			// En este aparatdo decimos que jugador le toca su turno
+			
+			System.out.println(" ______________________________________________________");
+			System.out.println("|                                                      |");
+			System.out.println("|         " +TurnoJug + "este jugador comienza         |");
+			System.out.println("|______________________________________________________|");
 			
 			boolean Partida = false;
 			
 			while(!Partida) {
 				
+				int fila, columna;
 				
+				System.out.println(" ______________________________________________________");
+				System.out.println("|                                                      |");
+				System.out.println("|            Escoge la fila que es 1, 2, 3             |");
+				System.out.println("|______________________________________________________|");
 				
+				fila = teclado.nextInt() -1;
+				
+				System.out.println(" ______________________________________________________");
+				System.out.println("|                                                      |");
+				System.out.println("|            Escoge la columna que es 1                |");
+				System.out.println("|                                     2                |");
+				System.out.println("|                                     3                |");
+				System.out.println("|______________________________________________________|");
+				
+				columna = teclado.nextInt() -1;
 			}
 			
 			
