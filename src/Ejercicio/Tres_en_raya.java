@@ -117,9 +117,9 @@ public class Tres_en_raya {
 			System.out.println("|         " +TurnoJug + "este jugador comienza         |");
 			System.out.println("|______________________________________________________|");
 			
-			boolean Partida = false;
+			boolean ficha = false;
 			
-			while(!Partida) {
+			while(!ficha) {
 				
 				int fila, columna; // variables para la matrizes
 				
@@ -161,6 +161,40 @@ public class Tres_en_raya {
 					
 					columna = teclado.nextInt() -1;
 				}
+				
+				/* Este apartado es para verificar si la casilla está vacía
+				 *  en las fila i columnas se comprueba la condicion que equivale al mismo tabletra con lo unico que
+				 *  cuenta esque si se encuentra alguna ficha colocada donde la coloco un jugador saldra un 
+				 *  mensaje diciento que ese lugar esta ocupado
+				 */
+                if (fila >= 0 && fila < 3 && columna >= 0 && columna < 3 && Tabla[fila][columna].equals("-")) {
+                    
+                	// Colocar la ficha según el turno de cada jugador
+                    if (TurnoJug.equals(Jugador1)) { 
+                    	// si se cumple la condicion el jugador uno tendra la x 
+                    	// si no se cumple la condicon el jugador dos tendra la o
+                    	
+                        Tabla[fila][columna] = "X";
+                        
+                    } else {
+                    	
+                        Tabla[fila][columna] = "O";
+                        
+                    }
+                    
+                    ficha = true; // en esta parte le decimos que la ficha X, O se ha puesto
+                    
+                } 
+                
+                // en este aparatado es por si alguna ficha estaba puesta 
+                else {
+                	
+                	System.out.println(" ______________________________");
+					System.out.println("|                              |");
+                    System.out.println("|    Este sitio esta ocupado   |");
+                    System.out.println("|______________________________|");
+                    
+                }	
 			}
 			
 			
