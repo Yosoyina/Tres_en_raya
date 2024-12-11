@@ -198,6 +198,31 @@ public class Tres_en_raya {
 			}
 			
 			
+			// Aparatado para verificar si el jugador 1 o 2 ha ganado
+            boolean Jg = false;
+            
+            for (int i = 0; i < 3; i++) {
+                // En este aratado se verifica las filas para ver si ha ganado el J1 o J2
+            	
+            	/*
+            	 * Dentro de este bucle recorrera las tres filas si las x o las o de cada jugador 
+            	 * son iguales y si no son iguales con el guion asi si los tres son iguales 
+            	 * uno de los dos jugadores a ganado
+            	 */
+            	
+            	
+                if (Tabla[i][0].equals(Tabla[i][1]) && Tabla[i][1].equals(Tabla[i][2]) && !Tabla[i][0].equals("-")) {
+                    Jg = true;
+                    break; // se rompe la condicion de las filas
+                }
+                // En este aratado se verifica las filas para ver si ha ganado elñ J1 o J2
+                if (Tabla[0][i].equals(Tabla[1][i]) && Tabla[1][i].equals(Tabla[2][i]) && !Tabla[0][i].equals("-")) {
+                    Jg = true;
+                    break; // se rompe la condicion de las columnas
+                }
+            }
+			
+			
 			
 		} // acaba el bucle while
 		
