@@ -121,14 +121,25 @@ public class Tres_en_raya {
 			
 			while(!Partida) {
 				
-				int fila, columna;
+				int fila, columna; // variables para la matrizes
 				
 				System.out.println(" ______________________________________________________");
 				System.out.println("|                                                      |");
 				System.out.println("|            Escoge la fila que es 1, 2, 3             |");
 				System.out.println("|______________________________________________________|");
 				
-				fila = teclado.nextInt() -1;
+				fila = teclado.nextInt() -1; // Esta variable es para la matriz para cuando el jugador introduza se de la m,atriz un 0, 1, 2.
+				
+				while(fila < 1 || fila > 3) {
+					
+					System.out.println(" _______________________________________________________________");
+					System.out.println("|                                                               |");
+					System.out.println("|            Escoge de nuevo la fila que es 1, 2, 3             |");
+					System.out.println("|_______________________________________________________________|");
+					
+					fila = teclado.nextInt() -1;
+				}
+				
 				
 				System.out.println(" ______________________________________________________");
 				System.out.println("|                                                      |");
@@ -137,7 +148,19 @@ public class Tres_en_raya {
 				System.out.println("|                                     3                |");
 				System.out.println("|______________________________________________________|");
 				
-				columna = teclado.nextInt() -1;
+				columna = teclado.nextInt() -1; // Esta variable es para la matriz para cuando el jugador introduza se de la m,atriz un 0, 1, 2.
+				
+				while(columna < 1 || columna > 3) {
+					
+					System.out.println(" _______________________________________________________________");
+					System.out.println("|                                                               |");
+					System.out.println("|            Escoge de nuevo la columna que es 1                |");
+					System.out.println("|                                              2                |");
+					System.out.println("|                                              3                |");
+					System.out.println("|_______________________________________________________________|");
+					
+					columna = teclado.nextInt() -1;
+				}
 			}
 			
 			
