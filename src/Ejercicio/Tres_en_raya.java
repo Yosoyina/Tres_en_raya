@@ -243,7 +243,36 @@ public class Tres_en_raya {
                 break;
             }
 			
+         // Apartado para verificar si ha habido empate entre los dos jugadores
+            boolean empate = true;
             
+            
+            // esto es para verificar de que alguna casilla tenga un guion tato por filas como por columnas
+            for (int filas = 0; filas < 3; filas++) {
+                for (int columnas = 0; columnas < 3; columnas++) {
+                    if (Tabla[filas][columnas].equals("-")) {
+                        empate = false; // Si hay alguna casilla vacía no habra un empate ya que no se ha completado el tablero
+                    }
+                }
+            }
+            
+            
+            // En este bucle recorrea todas las filas i columnas del tablero confirmado que ninguna casilñla este vacia
+            if (empate) {
+                for (int filas = 0; filas < Tabla.length; filas++) {
+                    for (int columnas = 0; columnas < Tabla[filas].length; columnas++) {
+                        System.out.print(Tabla[filas][columnas] + " ");
+                    }
+                    System.out.println("");
+                }
+                
+                System.out.println(" ______________");
+				System.out.println("|              |");
+                System.out.println("|    Empate    |");
+                System.out.println("|______________|");
+                
+                break;// se rompe la condicion
+            }
             
             
 		} // acaba el bucle while
