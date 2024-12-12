@@ -275,6 +275,19 @@ public class Tres_en_raya {
             }
             
             
+         // Apartado para cambiar el turno de los jugadores
+            
+            if (TurnoJug.equals(Jugador1)) {
+            	
+                TurnoJug = Jugador2;
+                
+            } else {
+            	
+                TurnoJug = Jugador1;
+                
+            }
+            
+            
 		} // acaba el bucle while
 		
 		
